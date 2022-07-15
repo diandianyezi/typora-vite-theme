@@ -4,8 +4,8 @@
     --primary-color: #646cff;
     --side-bar-bg-color: #fff;
     --control-text-color: #777;
-    --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important;
-    --font-monospace: 'Fira Code', 'Roboto Mono', monospace !important;
+    --font-sans-serif: 'Roboto Mono', 'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    --font-monospace: 'Roboto Mono', 'Fira Code', monospace !important;
     --vp-c-white: #ffffff;
     --vp-c-white-soft: #f9f9f9;
     --vp-c-white-mute: #f1f1f1;
@@ -66,6 +66,11 @@
     --vp-c-red-dimm-1: rgba(237, 60, 80, .5);
     --vp-c-red-dimm-2: rgba(237, 60, 80, .25);
     --vp-c-red-dimm-3: rgba(237, 60, 80, .05);
+    
+    --vp-c-text-light-1: #2c3e50;
+    --vp-c-text-light-2: #476582;
+    --vp-c-text-light-3: #90a4b7;
+
     --vp-c-brand: #646cff;
     --vp-c-brand-light: #747bff;
     --vp-c-brand-lighter: #9499ff;
@@ -74,10 +79,13 @@
     --vp-c-brand-dimm: rgba(100, 108, 255, .08);
     --active-file-border-color: var(--vp-c-brand-dark);
     --active-file-bg-color: var(--vp-c-gray-light-5);
+    --search-select-text-color: var(--vp-c-brand-light);
+
+    --heading-char-color: #ca7cd0;
 }
 
 html {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
@@ -101,9 +109,9 @@ body {
     word-spacing: .05rem;
 }
 
-#write ol li {
+/* #write ol li {
     padding-left: 0.5rem;
-}
+} */
 
 #write>ul:first-child,
 #write>ol:first-child {
@@ -289,6 +297,7 @@ li p.first {
 ul,
 ol {
     padding-left: 30px;
+    color: var(--vp-c-brand);
 }
 
 ul:first-child,
@@ -301,9 +310,13 @@ ol:last-child {
     margin-bottom: 0;
 }
 
+ul,ol li {
+    color: var(--vp-c-text-light-1);
+}
+
 blockquote {
-    border: 1px solid var(--vp-c-brand);
-    border-radius: 6px;
+    border-left: 4px solid var(--vp-c-brand);
+    /* border-radius: 6px; */
     padding: 20px 15px;
     color: var(--vp-c-brand-darker);
     background-color: var(--vp-c-brand-dimm);
@@ -553,10 +566,15 @@ footer {
 .file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
-
+/* 
 .file-list-item.active {
     border-left: 4px solid var(--vp-c-brand-light)!important;
+} */
+
+.file-tree-node.active {
+    color: var(--vp-c-brand-light);
 }
+
 
 
 .mac-seamless-mode #typora-sidebar {
@@ -720,4 +738,16 @@ footer {
 
 .md-fences .code-tooltip {
     background-color: #263238;
+}
+
+.in-text-selection, ::selection {
+    background-color: var(--vp-c-brand-dimm);
+}
+
+#write ol li::marker {
+    color: var(--vp-c-brand-darker);
+}
+
+#write ul li::marker {
+    color: var(--vp-c-brand-darker);
 }
