@@ -4,7 +4,7 @@
     --primary-color: #646cff;
     --side-bar-bg-color: #fff;
     --control-text-color: #777;
-    --font-sans-serif: 'Roboto Mono', 'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important;
     --font-monospace: 'Roboto Mono', 'Fira Code', monospace !important;
     --vp-c-white: #ffffff;
     --vp-c-white-soft: #f9f9f9;
@@ -81,7 +81,7 @@
     --active-file-bg-color: var(--vp-c-gray-light-5);
     --search-select-text-color: var(--vp-c-brand-light);
 
-    --heading-char-color: #ca7cd0;
+    --heading-char-color: var(--vp-c-brand);
 }
 
 html {
@@ -387,7 +387,7 @@ table tr td:last-child {
     margin: 0.8rem 0 !important;
     padding: 0.3rem 0 !important;
     line-height: 1.43rem;
-    background-color: var(--vp-c-gray-dark-4) !important;
+    background-color: var(--vp-c-indigo) !important;
     border-radius: 2px;
     font-family: var(--font-monospace);
     font-size: 0.85rem;
@@ -750,4 +750,10 @@ footer {
 
 #write ul li::marker {
     color: var(--vp-c-brand-darker);
+}
+
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 5px solid var(--vp-c-brand);
+    z-index: 3;
 }
