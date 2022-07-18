@@ -315,13 +315,19 @@ ul,ol li {
 }
 
 blockquote {
-    border-left: 4px solid var(--vp-c-brand);
-    /* border-radius: 6px; */
+    border: 1px solid var(--vp-c-brand);
+    border-radius: 6px;
     padding: 20px 15px;
     color: var(--vp-c-brand-darker);
     background-color: var(--vp-c-brand-dimm);
     font-size: 15px;
 }
+
+
+blockquote code {
+    font-size: inherit !important;
+}
+
 
 table {
     padding: 0;
